@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Muklti Databases</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet"/>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid text-center bg-success">
+        <h1 class="text-white">{% block title %}{% endblock %}</h1>
+        <p class="text-white">We are ready to process your data </p> 
+    </div>
+        <p class="text-center text-dark">{{message}}</p>
+    <div class="row justify-content-center">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="/">HOME</a></li>
+            <li class="breadcrumb-item"><a href="/get-data/1">BND</a></li>
+            <li class="breadcrumb-item"><a href="/get-data/2">EC</a></li>
+            <li class="breadcrumb-item"><a href="/get-data/3">GIS</a></li>
+            <li class="breadcrumb-item"><a href="/get-data/4">NHIS</a></li>
+          </ol>
+        </nav>
+    </div>
+    <div>
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
